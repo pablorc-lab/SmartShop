@@ -1,5 +1,5 @@
 # Smart Shop
-[![My Skills](https://skillicons.dev/icons?i=python,flask,mysql,aws)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=python,flask,sqlite,aws)](https://skillicons.dev)
 
 Proyecto de la asignatura "Ingeniería de Sistemas de Información" del Grado en Ingeniería Informática, perteneciente a la ETSIIT, curso 2023/2024. 
 
