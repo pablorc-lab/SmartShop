@@ -1,0 +1,103 @@
+/***********************
+  Monitor pequeño: 
+************************/
+@media (max-width: 1199px) {
+
+    .form-index button, .form-resultado button {
+        font-size: 15px;
+    }
+   
+    .product-container h2 {
+        font-size: 16px; 
+        padding: 0px 30px; 
+    }
+
+    .product-container p {
+        font-size: 16px;
+    }
+}
+
+/***********************
+  Monitor grande: 
+************************/
+@media (min-width: 1200px) {
+
+    .form-index button, .form-resultado button {
+        font-size: 17px;
+    }
+    
+    .product-container h2 {
+        font-size: 20px; 
+        padding: 0px 30px; 
+    }
+
+    .product-container p {
+        font-size: 20px;
+    }
+}
+
+
+/* FORMULARIO
+-----------------------------------------------------------------------*/
+.form-index {    
+    background-color: rgb(148, 150, 153);
+    margin: 0 33vw;
+    padding: 35px 0px;
+    border-radius: 5px;
+}
+
+.form-index form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-resultado form {
+    display: flex;
+    gap: 10px;
+
+}
+
+.form-index input, .form-resultado input {
+    height: 35px;
+    width: 20vw;
+    border: 1px solid rgb(206, 136, 6);
+    border-radius: 5px;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.form-index input:focus, .form-resultado input:focus {
+    outline: none; /* Elimina el borde del navegador por defecto */
+}
+
+.form-index button, .form-resultado button {
+    color: rgb(107, 27, 3);
+    height: 40px;
+    width: 7vw;
+    border: 1px solid rgb(206, 136, 6);
+    background-color: rgb(255, 166, 2);
+    font-weight: bold;
+}
+
+
+
+/* BARRA BUSQUEDA*/
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding-left: 40px; /* Espacio para el icono */
+}
+
+.search-container img {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    pointer-events: none; /* Permite hacer clic a través de la imagen */
+}
+

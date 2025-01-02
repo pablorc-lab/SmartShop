@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/css/header-footer.css">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="../static/css/listado-style.css">
+        <title>{{ titulo }}</title>
+    </head>
+<body>
+    <header class="{{ clase_cabecera }}">
+        <a href="/">
+            <figure>
+                <img src="../static/images/icono.webp" width="70">
+                <figcaption>
+                    <h1>SmartShop</h1>
+                </figcaption>
+            </figure>
+        </a>
+        {% block barra_busqueda %}{% endblock %}
+    </header>  
+    {% block main %}{% endblock %}
+    <footer>
+        <div class="box1">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>
+                Este comparador de precios ha sido diseñado por Guillermo Ramblado Carrasco 
+                y Pablo Ramblado Carrasco, con la intención de facilitar al cliente el mejor
+                precio de un producto en relación a diferentes supermercados
+            </p>
+        </div>
+        <div class="box2">
+            <h2>CONTACTO</h2>
+            <p>pabloramblado@correo.ugr.es | guilleramblado@correo.ugr.es</p>
+
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block barra_busqueda %}
+    <div class="form-resultado">
+        <form action="/products" method="post">
+            <div class="search-container">
+                <img src="../static/images/lupa-icono.webp" alt="Icono de lupa">
+                <input type="text" id="producto" name="producto" placeholder="Nombre del producto">
+            </div>
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <main>
+        <h1 style="text-align: center; font-size: 40px;">
+            <strong>{% if lista_productos is defined %}{{ lista_productos|length }}{% else %}0{% endif %}</strong> Resultados para <i>"{{ producto_a_buscar }}"</i>
+        </h1>
+        
+        {% if lista_productos is defined %}
+        <form method="POST" class="filtrado" action="{{url_for('filtrar',producto_a_buscar=producto_a_buscar)}}" id="filter-form">
+            <aside class="supermercados">
+                <h3>Supermercados</h3>
+                <div>
+                    <input type="checkbox" name="supermercado" value="1" > 
+                    <label for="alcampo">Alcampo</label>
+
+                    <input type="checkbox" name="supermercado" value="2"> 
+                    <label for="dia">Dia</label>
+
+                    <input type="checkbox" name="supermercado" value="3"> 
+                    <label for="mercadona">Mercadona</label>
+                </div>
+            </aside>
+            
+            <aside class="precios-filtro">
+                <h3>Precio</h3>
+                <div>
+                    <input type="radio" name="precio" value="Creciente"> 
+                    <label for="Creciente">Creciente</label>
+
+                    <input type="radio" name="precio" value="Decreciente"> 
+                    <label for="Decreciente">Decreciente</label>
+                </div>                
+            </aside>
+            <button class="envio-btt" type="submit">APLICAR </button>
+        </form>
+
+        <section class="product-container">
+            {% for producto in lista_productos %}
+                {% include '_visualizar.html' %}
+            {% endfor %}
+        </section>
+        {% endif %}
+    </main>
+{% endblock %}

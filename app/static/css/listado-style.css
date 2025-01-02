@@ -1,0 +1,122 @@
+/* FILTRADO
+-------------------------------------------*/
+.filtrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 120px;
+    padding: 70px 0px;
+    padding: 10px;
+    margin: 0 15px;
+}
+
+.supermercados div, .precios-filtro div {
+    border: 1px solid rgb(121, 121, 121);
+    background-color: rgb(246, 244, 253);
+    display: flex;
+    color: rgb(173, 173, 177);
+}
+
+.filtrado label {
+    padding: 15px 25px 15px 2px; 
+    font-size: 18px;
+}
+
+.filtrado input {
+    margin-left: 15px;
+    width: 15px;
+}
+
+.filtrado input:checked + label {
+    color: rgb(21, 199, 5);
+}
+
+.filtrado h3 {
+    text-align: center;
+    background-color: rgb(157, 200, 255);
+    padding: 10px 40px;
+    margin-top: 0;
+    margin-bottom: 0px;
+    border: 1px solid rgb(121, 121, 121);
+    border-bottom: 0;
+}
+
+/*BOTON DE FILTRADO*/
+.envio-btt {
+    width: 150px;
+    height: 60px;
+    
+    border: 2px solid rgb(1, 85, 153);
+    background-color: rgb(59, 125, 248);
+    color: white;
+    border-radius: 120px;
+    
+    font-weight: bold;
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* IMAGENES PRODUCTOS
+-----------------------------------------------------------------------*/
+.product-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 70px 0px;
+    width: 100%;
+}
+
+
+.logotipo {
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.product {
+    margin-bottom: 70px;
+    width: 30%; 
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: background-color 0.1s; 
+}
+
+.product-container img {
+    mix-blend-mode:darken;
+    width: 45%; 
+}
+
+.product:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+
+.mercadona{
+    background-image: url("../images/mercadona-logo.webp");
+    background-position: 10px 10px; 
+    background-repeat: no-repeat; 
+    background-size: 15% auto; 
+}
+
+.mercadona:hover {border: 1px solid ; border-color: rgb(6, 197, 48) orange ;}
+.alcampo:hover {border: 1px solid ; border-color: rgb(34, 165, 2) red ;}
+.dia:hover {border: 1px solid ; border-color: red;}
+
+.dia{
+    background-image: url("../images/dia-logo.webp");
+    background-position: 10px 10px; 
+    background-repeat: no-repeat; 
+    background-size: 15% auto; 
+}
+ 
+.alcampo {
+    background-image: url("../images/alcampo-logo.webp");
+    background-position: 10px 10px; 
+    background-repeat: no-repeat; 
+    background-size: 15% auto; 
+}

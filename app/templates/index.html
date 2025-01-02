@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <main>
+        <div class="form-index">
+            <form action="/products" method="post">
+                <div class="search-container">
+                    <img src="../static/images/lupa-icono.webp" alt="Icono de lupa">
+                    <input type="text" id="producto" name="producto" placeholder="Nombre del producto">
+                </div>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        
+        <section class="product-container">
+            <div class="logotipo"><img src="../static/images/alcampo-logo.webp" width="150"></div>
+            <div class="logotipo"><img src="../static/images/mercadona-logo.webp" width="150"></div>
+            <div class="logotipo"><img src="../static/images/dia-logo.webp" width="150"></div>
+
+            {% for producto in lista_productos %}
+                {% include '_visualizar.html' %}
+            {% endfor %}
+        </section>
+    </main>
+{% endblock %}

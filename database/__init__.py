@@ -1,0 +1,1 @@
+from database.config_selenium import unaccent
